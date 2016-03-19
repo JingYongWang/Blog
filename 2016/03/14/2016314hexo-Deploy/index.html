@@ -15,12 +15,15 @@ git rm --cache &amp;lt;file&amp;gt;
 <meta property="og:description" content="部屬Blog遇到問題在部屬Hexo發現的問題之一,原本想用.gitignore來限制自己不想顯示的檔案,但後來發現已經送交至版本庫的檔案，事後再來設定 .gitignore 檔案是沒用的!!!利用
 git rm --cache &amp;lt;file&amp;gt;
 再把它給commit上去就OK囉~">
-<meta property="og:updated_time" content="2016-03-19T03:08:21.533Z">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/sshcConfig.jpg?raw-true">
+<meta property="og:updated_time" content="2016-03-19T03:53:04.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-Deploy">
 <meta name="twitter:description" content="部屬Blog遇到問題在部屬Hexo發現的問題之一,原本想用.gitignore來限制自己不想顯示的檔案,但後來發現已經送交至版本庫的檔案，事後再來設定 .gitignore 檔案是沒用的!!!利用
 git rm --cache &amp;lt;file&amp;gt;
 再把它給commit上去就OK囉~">
+<meta name="twitter:image" content="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true">
   
     <link rel="alternate" href="/atom.xml" title="Yong" type="application/atom+xml">
   
@@ -64,9 +67,9 @@ git rm --cache &amp;lt;file&amp;gt;
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://JingYongWang.github.io/Blog"></form>
@@ -111,18 +114,22 @@ git rm --cache &amp;lt;file&amp;gt;
 <li>Git</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line"></span><br><span class="line">hexo init  yourFolder  //初始化</span><br><span class="line"></span><br><span class="line">hexo generate 產生靜態檔案</span><br><span class="line">hexo deploy   部屬上去</span><br><span class="line">=&gt; hexo deploy -g   //懶人版</span><br></pre></td></tr></table></figure>
+<h2 id="輕鬆部屬上hexo之sshKey"><a href="#輕鬆部屬上hexo之sshKey" class="headerlink" title="輕鬆部屬上hexo之sshKey"></a>輕鬆部屬上hexo之sshKey</h2><p>為了讓部屬上去可以不用輸入密碼,因此我改用ssh方式<br>照以下教學做了之後發現一個小地方未改</p>
+<p>原本我是用HTTP方式要輸入帳戶名稱及密碼,<br>所以要從這邊抓取SSH的格式<br><img src="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true" alt="test"></p>
+<p>並貼到這邊,即可部屬成功<br><img src="http://jingyongwang.github.io/Blog/image/sshcConfig.jpg?raw-true" alt="test"></p>
 <p>補充網址:</p>
 <ul>
 <li><a href="http://blog.csdn.net/nyist327/article/details/39207383" target="_blank" rel="external">忽略不想上傳的文件</a></li>
 <li><a href="https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/docs/19%20%E8%A8%AD%E5%AE%9A%20.gitignore%20%E5%BF%BD%E7%95%A5%E6%B8%85%E5%96%AE.markdown" target="_blank" rel="external">一開始就設定.gitignore</a></li>
+<li>[sshKey]</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="2016/03/14/2016314hexo-Deploy/" data-id="cilyhu1dw00011gfeg3xm45i1" class="article-share-link">Поделиться</a>
+      <a data-url="2016/03/14/2016314hexo-Deploy/" data-id="cilyhu1dw00011gfeg3xm45i1" class="article-share-link">Share</a>
       
-        <a href="2016/03/14/2016314hexo-Deploy/#disqus_thread" class="article-comment-link">Комментарии</a>
+        <a href="2016/03/14/2016314hexo-Deploy/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li></ul>
@@ -134,7 +141,7 @@ git rm --cache &amp;lt;file&amp;gt;
 <nav id="article-nav">
   
     <a href="/Blog/2016/03/15/Git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Следующий</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           Git
@@ -161,7 +168,7 @@ git rm --cache &amp;lt;file&amp;gt;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Категории</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Git/">Git</a></li></ul>
     </div>
@@ -171,7 +178,7 @@ git rm --cache &amp;lt;file&amp;gt;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Метки</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/hexo/">hexo</a></li></ul>
     </div>
@@ -181,7 +188,7 @@ git rm --cache &amp;lt;file&amp;gt;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Облако меток</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/Blog/tags/Git/" style="font-size: 20px;">Git</a> <a href="/Blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/Blog/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
@@ -190,7 +197,7 @@ git rm --cache &amp;lt;file&amp;gt;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Архив</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/03/">三月 2016</a></li></ul>
     </div>
@@ -200,7 +207,7 @@ git rm --cache &amp;lt;file&amp;gt;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Недавние записи</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -229,7 +236,7 @@ git rm --cache &amp;lt;file&amp;gt;
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Jing Yong Wang<br>
-      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
