@@ -17,7 +17,7 @@ git rm --cache &amp;lt;file&amp;gt;
 再把它給commit上去就OK囉~">
 <meta property="og:image" content="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true">
 <meta property="og:image" content="http://jingyongwang.github.io/Blog/image/sshcConfig.jpg?raw-true">
-<meta property="og:updated_time" content="2016-03-19T03:53:04.058Z">
+<meta property="og:updated_time" content="2016-03-19T16:13:32.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-Deploy">
 <meta name="twitter:description" content="部屬Blog遇到問題在部屬Hexo發現的問題之一,原本想用.gitignore來限制自己不想顯示的檔案,但後來發現已經送交至版本庫的檔案，事後再來設定 .gitignore 檔案是沒用的!!!利用
@@ -35,6 +35,9 @@ git rm --cache &amp;lt;file&amp;gt;
   
   <link rel="stylesheet" href="/Blog/css/style.css">
   
+
+  <!--2016/03/20 Add by JingYongWang-->
+  <link href="/Blog/favicon.png" rel="icon">
 
 </head>
 
@@ -115,8 +118,8 @@ git rm --cache &amp;lt;file&amp;gt;
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line"></span><br><span class="line">hexo init  yourFolder  //初始化</span><br><span class="line"></span><br><span class="line">hexo generate 產生靜態檔案</span><br><span class="line">hexo deploy   部屬上去</span><br><span class="line">=&gt; hexo deploy -g   //懶人版</span><br></pre></td></tr></table></figure>
 <h2 id="輕鬆部屬上hexo之sshKey"><a href="#輕鬆部屬上hexo之sshKey" class="headerlink" title="輕鬆部屬上hexo之sshKey"></a>輕鬆部屬上hexo之sshKey</h2><p>為了讓部屬上去可以不用輸入密碼,因此我改用ssh方式<br>照以下教學做了之後發現一個小地方未改</p>
-<p>原本我是用HTTP方式要輸入帳戶名稱及密碼,<br>所以要從這邊抓取SSH的格式<br><img src="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true" alt="test"></p>
-<p>並貼到這邊,即可部屬成功<br><img src="http://jingyongwang.github.io/Blog/image/sshcConfig.jpg?raw-true" alt="test"></p>
+<p>原本我是用HTTP方式要輸入帳戶名稱及密碼,<br>所以要從這邊抓取SSH的格式,<br>並貼到根目錄的config.yml,即可部屬成功<br><img src="http://jingyongwang.github.io/Blog/image/gitHub-ssh.jpg?raw-true" alt="test"></p>
+<p><img src="http://jingyongwang.github.io/Blog/image/sshcConfig.jpg?raw-true" alt="test"></p>
 <p>補充網址:</p>
 <ul>
 <li><a href="http://blog.csdn.net/nyist327/article/details/39207383" target="_blank" rel="external">忽略不想上傳的文件</a></li>
@@ -127,7 +130,7 @@ git rm --cache &amp;lt;file&amp;gt;
       
     </div>
     <footer class="article-footer">
-      <a data-url="2016/03/14/2016314hexo-Deploy/" data-id="cilyhu1dw00011gfeg3xm45i1" class="article-share-link">Share</a>
+      <a data-url="2016/03/14/2016314hexo-Deploy/" data-id="cilzzx2gi00047ofe9q4o17gk" class="article-share-link">Share</a>
       
         <a href="2016/03/14/2016314hexo-Deploy/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -190,7 +193,7 @@ git rm --cache &amp;lt;file&amp;gt;
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/Blog/tags/Git/" style="font-size: 20px;">Git</a> <a href="/Blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/Blog/tags/hexo/" style="font-size: 10px;">hexo</a>
+      <a href="/Blog/tags/Git/" style="font-size: 20px;">Git</a> <a href="/Blog/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/Blog/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
   </div>
 
@@ -210,6 +213,10 @@ git rm --cache &amp;lt;file&amp;gt;
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/Blog/2016/03/20/hexo-1/">Hexo小技巧(一)</a>
+          </li>
         
           <li>
             <a href="/Blog/2016/03/17/317-hexo-comment/">317-hexo-Disqus</a>

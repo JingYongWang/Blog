@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git | Yong</title>
+  <title>Hexo小技巧(一) | Yong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#整理自己常用的Git指令與筆記
-1234567git add . /*所有更新*/git commit -m &quot;註解&quot;git push -u origin master /*上傳master分支*/git push -u origin gh-pagesgit checkout --orphan gh-pages /*建立一個沒有parent的branch，並移到該branch上*/git sta">
+  <meta name="description" content="#(一)替網頁製作一個小favicon
+Favicon可被稱為website icon,是跟那個網站相關聯的圖示例如FB或是Plurk都有他們的icon以下我為了測試自己做的圖~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git">
-<meta property="og:url" content="http://JingYongWang.github.io/Blog/2016/03/15/Git/index.html">
+<meta property="og:title" content="Hexo小技巧(一)">
+<meta property="og:url" content="http://JingYongWang.github.io/Blog/2016/03/20/hexo-1/index.html">
 <meta property="og:site_name" content="Yong">
-<meta property="og:description" content="#整理自己常用的Git指令與筆記
-1234567git add . /*所有更新*/git commit -m &quot;註解&quot;git push -u origin master /*上傳master分支*/git push -u origin gh-pagesgit checkout --orphan gh-pages /*建立一個沒有parent的branch，並移到該branch上*/git sta">
-<meta property="og:updated_time" content="2016-03-19T16:13:31.505Z">
+<meta property="og:description" content="#(一)替網頁製作一個小favicon
+Favicon可被稱為website icon,是跟那個網站相關聯的圖示例如FB或是Plurk都有他們的icon以下我為了測試自己做的圖~">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/icon.jpg?raw-true">
+<meta property="og:updated_time" content="2016-03-20T03:20:01.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="#整理自己常用的Git指令與筆記
-1234567git add . /*所有更新*/git commit -m &quot;註解&quot;git push -u origin master /*上傳master分支*/git push -u origin gh-pagesgit checkout --orphan gh-pages /*建立一個沒有parent的branch，並移到該branch上*/git sta">
+<meta name="twitter:title" content="Hexo小技巧(一)">
+<meta name="twitter:description" content="#(一)替網頁製作一個小favicon
+Favicon可被稱為website icon,是跟那個網站相關聯的圖示例如FB或是Plurk都有他們的icon以下我為了測試自己做的圖~">
+<meta name="twitter:image" content="http://jingyongwang.github.io/Blog/image/icon.jpg?raw-true">
   
     <link rel="alternate" href="/atom.xml" title="Yong" type="application/atom+xml">
   
@@ -75,16 +77,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Git" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/Blog/2016/03/15/Git/" class="article-date">
-  <time datetime="2016-03-15T12:29:31.000Z" itemprop="datePublished">2016-03-15</time>
+    <a href="/Blog/2016/03/20/hexo-1/" class="article-date">
+  <time datetime="2016-03-20T02:52:03.000Z" itemprop="datePublished">2016-03-20</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/Blog/categories/Git/">Git</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -93,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git
+      Hexo小技巧(一)
     </h1>
   
 
@@ -101,18 +99,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#整理自己常用的Git指令與筆記</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git add . /*所有更新*/</span><br><span class="line">git commit -m <span class="string">"註解"</span></span><br><span class="line">git push -u origin master /*上傳master分支*/</span><br><span class="line">git push -u origin gh-pages</span><br><span class="line">git checkout --orphan gh-pages /*建立一個沒有parent的branch，並移到該branch上*/</span><br><span class="line">git status</span><br><span class="line">git checkout master /*(切回master分支)*/</span><br></pre></td></tr></table></figure>
+        <p>#(一)替網頁製作一個小favicon</p>
+<p>Favicon可被稱為website icon,是跟那個網站相關聯的圖示<br>例如FB或是Plurk都有他們的icon<br>以下我為了測試自己做的圖~</p>
+<a id="more"></a>
+<p>如下<br><img src="http://jingyongwang.github.io/Blog/image/icon.jpg?raw-true" alt="test"></p>
+<ol>
+<li>先製作一個favicon檔,如下網址</li>
+<li>做好下載完存成一份副檔名為.png</li>
+<li>找到   <code>theme/light/layout/_partial/head.ejs</code> 檔案</li>
+<li>在head.ejs裡新增一段Link: <code>&lt;link href=&quot;&lt;%- config.root %&gt;favicon.png&quot; rel=&quot;icon&quot;&gt;</code></li>
+</ol>
+<ul>
+<li><a href="http://www.favicon.cc/" target="_blank" rel="external">Favicon製作網站</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="2016/03/15/Git/" data-id="cilzzx2gs00057ofei5c70jz4" class="article-share-link">Share</a>
+      <a data-url="2016/03/20/hexo-1/" data-id="cilzzx2gs00097ofe1jtcfj06" class="article-share-link">Share</a>
       
-        <a href="2016/03/15/Git/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="2016/03/20/hexo-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Git/">Git</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li></ul>
 
     </footer>
   </div>
@@ -120,19 +129,10 @@
     
 <nav id="article-nav">
   
-    <a href="/Blog/2016/03/17/317-hexo-comment/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          317-hexo-Disqus
-        
-      </div>
-    </a>
   
-  
-    <a href="/Blog/2016/03/14/2016314hexo-Deploy/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Blog/2016/03/17/317-hexo-comment/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hexo-Deploy</div>
+      <div class="article-nav-title">317-hexo-Disqus</div>
     </a>
   
 </nav>
@@ -244,7 +244,7 @@
 <script>
   var disqus_shortname = 'jingyongwangblog';
   
-  var disqus_url = 'http://JingYongWang.github.io/Blog/Blog/2016/03/15/Git/';
+  var disqus_url = 'http://JingYongWang.github.io/Blog/Blog/2016/03/20/hexo-1/';
   
   (function(){
     var dsq = document.createElement('script');
