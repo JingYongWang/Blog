@@ -12,7 +12,8 @@
 <meta property="og:site_name" content="Yong">
 <meta property="og:description" content="(一)替網頁製作一個小faviconFavicon可被稱為website icon,是跟那個網站相關聯的圖示例如FB或是Plurk都有他們的icon以下我為了測試自己做的圖~">
 <meta property="og:image" content="http://jingyongwang.github.io/Blog/image/icon.jpg?raw-true">
-<meta property="og:updated_time" content="2016-03-20T15:23:25.923Z">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/widgets.jpg?raw-true">
+<meta property="og:updated_time" content="2016-03-22T12:40:36.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo小技巧(一)">
 <meta name="twitter:description" content="(一)替網頁製作一個小faviconFavicon可被稱為website icon,是跟那個網站相關聯的圖示例如FB或是Plurk都有他們的icon以下我為了測試自己做的圖~">
@@ -65,7 +66,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://JingYongWang.github.io/Blog"></form>
@@ -105,22 +106,30 @@
 <li>找到   <code>theme/light/layout/_partial/head.ejs</code> 檔案</li>
 <li>在head.ejs裡新增一段Link: <code>&lt;link href=&quot;&lt;%- config.root %&gt;favicon.png&quot; rel=&quot;icon&quot;&gt;</code></li>
 </ol>
-<ul>
-<li><a href="http://www.favicon.cc/" target="_blank" rel="external">Favicon製作網站</a></li>
-</ul>
 <h2 id="二-自訂文章範本"><a href="#二-自訂文章範本" class="headerlink" title="(二) 自訂文章範本"></a>(二) 自訂文章範本</h2><p>每次在 <code>hexo new</code>時如果你想加入一些東西,讓你每次打文章不用多打<br>那你可以去改預設範本</p>
 <ol>
 <li><code>scaffolds/post.md</code></li>
 <li><code>scaffolds/draft.md 草稿</code>  </li>
 <li><code>scaffolds/page.md</code></li>
 </ol>
+<h2 id="三-新增右側欄-widgets"><a href="#三-新增右側欄-widgets" class="headerlink" title="(三) 新增右側欄 widgets"></a>(三) 新增右側欄 widgets</h2><ol>
+<li><p>先到  <code>\themes\landscape\config.yml</code> 去設定,如下圖:<br><img src="http://jingyongwang.github.io/Blog/image/widgets.jpg?raw-true" alt="test"></p>
+</li>
+<li><p>在 <code>themes\landscape\layout\_widget</code> 下去新增 <code>blogLink.ejs(範例)</code></p>
+</li>
+</ol>
+<p>範例代碼如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"widget-wrap"</span>&gt;</span><br><span class="line">  &lt;h3 class=<span class="string">"widget-title"</span>&gt;FriendLink&lt;/h3&gt;</span><br><span class="line">  &lt;div class=<span class="string">"widget"</span>&gt;</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href = <span class="string">""</span> title = <span class="string">""</span> &gt;example&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href = <span class="string">""</span> title=  <span class="string">""</span> &gt;example&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><a href="http://www.favicon.cc/" target="_blank" rel="external">Favicon製作網站</a></li>
+<li><a href="http://zipperary.com/2013/05/30/hexo-guide-4/" target="_blank" rel="external">Widget教學</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="2016/03/20/hexo-1/" data-id="cim3ebgop0008yofe8emzchj3" class="article-share-link">Share</a>
+      <a data-url="2016/03/20/hexo-1/" data-id="cim3ebgop0008yofe8emzchj3" class="article-share-link">Delen</a>
       
-        <a href="2016/03/20/hexo-1/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="2016/03/20/hexo-1/#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li></ul>
@@ -133,7 +142,7 @@
   
   
     <a href="/Blog/2016/03/17/317-hexo-comment/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title">317-hexo-Disqus</div>
     </a>
   
@@ -155,7 +164,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Categorieën</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Git/">Git</a></li></ul>
     </div>
@@ -165,7 +174,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li></ul>
     </div>
@@ -184,7 +193,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/03/">三月 2016</a></li></ul>
     </div>
@@ -194,7 +203,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
