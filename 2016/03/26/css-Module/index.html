@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/3 | Yong</title>
+  <title>css-Module | Yong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js+Javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yong">
-<meta property="og:url" content="http://JingYongWang.github.io/Blog/archives/2016/03/index.html">
+  <meta name="description" content="CSS-Module一開始看到這篇文章的標題不僅僅是好奇,看完之後它告訴我了兩個重點:
+
+不用想變數命名XD=&amp;gt; 使用composes,指載入外部CSS,命名使用hash方式不會重複
+效能提升 Why??=&amp;gt; 原本要找整個頁面的某個標籤,現在只須找這個頁面的”唯一變數”!!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-Module">
+<meta property="og:url" content="http://JingYongWang.github.io/Blog/2016/03/26/css-Module/index.html">
 <meta property="og:site_name" content="Yong">
-<meta property="og:description" content="Node.js+Javascript">
+<meta property="og:description" content="CSS-Module一開始看到這篇文章的標題不僅僅是好奇,看完之後它告訴我了兩個重點:
+
+不用想變數命名XD=&amp;gt; 使用composes,指載入外部CSS,命名使用hash方式不會重複
+效能提升 Why??=&amp;gt; 原本要找整個頁面的某個標籤,現在只須找這個頁面的”唯一變數”!!">
+<meta property="og:updated_time" content="2016-03-27T02:58:55.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yong">
-<meta name="twitter:description" content="Node.js+Javascript">
+<meta name="twitter:title" content="css-Module">
+<meta name="twitter:description" content="CSS-Module一開始看到這篇文章的標題不僅僅是好奇,看完之後它告訴我了兩個重點:
+
+不用想變數命名XD=&amp;gt; 使用composes,指載入外部CSS,命名使用hash方式不會重複
+效能提升 Why??=&amp;gt; 原本要找整個頁面的某個標籤,現在只須找這個頁面的”唯一變數”!!">
   
     <link rel="alternate" href="/atom.xml" title="Yong" type="application/atom+xml">
   
@@ -71,115 +81,75 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/03/26/css-Module/" class="archive-article-date">
-  <time datetime="2016-03-26T06:52:08.000Z" itemprop="datePublished">3月 26</time>
+        <section id="main"><article id="post-css-Module" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Blog/2016/03/26/css-Module/" class="article-date">
+  <time datetime="2016-03-26T06:52:08.000Z" itemprop="datePublished">2016-03-26</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/03/26/css-Module/">css-Module</a>
+    <h1 class="article-title" itemprop="name">
+      css-Module
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/03/20/hexo-1/" class="archive-article-date">
-  <time datetime="2016-03-20T02:52:03.000Z" itemprop="datePublished">3月 20</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/03/20/hexo-1/">Hexo小技巧(一)</a>
-    </h1>
-  
+        <h2 id="CSS-Module"><a href="#CSS-Module" class="headerlink" title="CSS-Module"></a>CSS-Module</h2><p>一開始看到這篇文章的標題不僅僅是好奇,<br>看完之後它告訴我了兩個重點:</p>
+<ol>
+<li>不用想變數命名XD<br>=&gt; 使用composes,指載入外部CSS,命名使用hash方式不會重複</li>
+<li>效能提升 Why??<br>=&gt; 原本要找整個頁面的某個標籤,現在只須找這個頁面的”唯一變數”!!<a id="more"></a>
+</li>
+</ol>
+<p>看完這篇覺得CSS-Module在前端部分以後可以成為程式規範之一<br>由於自己還未接觸React webpack等,<br>所以先筆記下來</p>
+<p>主要設定寫在webpack.config.js檔,<br>網站內容是寫在 <code>webpack-demo\src\components</code> ,有引用ejs模板,分別把每段內容分成一個資料夾<br>其中資料夾裡的CSS可以看到都用相同的class name,<br>每段XXXDemo.js經過<code>imports</code>的CSS在設定檔才會被css-loader轉成hash方式的命名</p>
+<p>之後研究出來會在更新</p>
+<ul>
+<li><a href="https://github.com/css-modules/webpack-demo" target="_blank" rel="external">webpack-demo</a></li>
+<li><a href="http://www.slideshare.net/newstory0113/css-modules-59719277" target="_blank" rel="external">CSS-Module</a></li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/03/17/317-hexo-comment/" class="archive-article-date">
-  <time datetime="2016-03-17T15:21:13.000Z" itemprop="datePublished">3月 17</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/03/17/317-hexo-comment/">317-hexo-Disqus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/03/15/Git/" class="archive-article-date">
-  <time datetime="2016-03-15T12:29:31.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="2016/03/26/css-Module/" data-id="cim9za3m8000abwfeybxefqmi" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/03/15/Git/">Git</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/03/14/2016314hexo-Deploy/" class="archive-article-date">
-  <time datetime="2016-03-14T13:27:41.000Z" itemprop="datePublished">3月 14</time>
-</a>
+        <a href="2016/03/26/css-Module/#disqus_thread" class="article-comment-link">Comments</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/03/14/2016314hexo-Deploy/">Hexo-Deploy</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/css/">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Blog/2016/03/20/hexo-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo小技巧(一)</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -293,11 +263,13 @@
 <script>
   var disqus_shortname = 'jingyongwangblog';
   
+  var disqus_url = 'http://JingYongWang.github.io/Blog/Blog/2016/03/26/css-Module/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
