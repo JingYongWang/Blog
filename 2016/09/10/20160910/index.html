@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: TDD | Yong</title>
+  <title>20160910 | Yong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js+Javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yong">
-<meta property="og:url" content="http://JingYongWang.github.io/Blog/tags/TDD/index.html">
+  <meta name="description" content="今天要介紹VS-CODE配置與NVM與Vue.js的配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20160910">
+<meta property="og:url" content="http://JingYongWang.github.io/Blog/2016/09/10/20160910/index.html">
 <meta property="og:site_name" content="Yong">
-<meta property="og:description" content="Node.js+Javascript">
+<meta property="og:description" content="今天要介紹VS-CODE配置與NVM與Vue.js的配置">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/vscode-eslint.jpg?raw-true">
+<meta property="og:image" content="http://jingyongwang.github.io/Blog/image/vscode-node1.jpg?raw-true">
+<meta property="og:updated_time" content="2016-09-10T11:50:28.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yong">
-<meta name="twitter:description" content="Node.js+Javascript">
+<meta name="twitter:title" content="20160910">
+<meta name="twitter:description" content="今天要介紹VS-CODE配置與NVM與Vue.js的配置">
+<meta name="twitter:image" content="http://jingyongwang.github.io/Blog/image/vscode-eslint.jpg?raw-true">
   
     <link rel="alternate" href="/atom.xml" title="Yong" type="application/atom+xml">
   
@@ -71,39 +75,81 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Blog/2016/07/23/HelloJS-week2/" class="archive-article-date">
-  <time datetime="2016-07-23T02:36:13.000Z" itemprop="datePublished">7月 23</time>
+        <section id="main"><article id="post-20160910" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Blog/2016/09/10/20160910/" class="article-date">
+  <time datetime="2016-09-10T01:46:10.000Z" itemprop="datePublished">2016-09-10</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Blog/2016/07/23/HelloJS-week2/">HelloJS-week2</a>
+    <h1 class="article-title" itemprop="name">
+      20160910
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天要介紹VS-CODE配置與NVM與Vue.js的配置</p>
+<a id="more"></a>
+<h1 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS-Code"></a>VS-Code</h1><p>安裝ESLint時遇到的問題</p>
+<p>因目前自己的環境為Winwdows,<br>故要先安裝全域</p>
+<p>如果沒做用ESLint沒有init的時候,VSCODE會出現這樣的錯誤</p>
+<p><img src="http://jingyongwang.github.io/Blog/image/vscode-eslint.jpg?raw-true" alt="error"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install -g eslint</span><br><span class="line"></span><br><span class="line">eslint --init</span><br><span class="line">(在你要的專案初始化eslint 的配置)</span><br><span class="line"></span><br><span class="line">eslint yourfile.js</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://eslint.org/docs/user-guide/getting-started" target="_blank" rel="external">ESLint</a></li>
+</ul>
+<h2 id="Node-js偵錯"><a href="#Node-js偵錯" class="headerlink" title="Node.js偵錯"></a>Node.js偵錯</h2><p>先在最左邊按第4個icon(偵錯按鈕)<br>並打開launch.json,更改紅框中你要偵測的JS檔案<br>執行快捷鍵為 <strong>F5</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;program&quot;: &quot;$&#123;workspaceRoot&#125;/yourfileLocation.js&quot;,</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://jingyongwang.github.io/Blog/image/vscode-node1.jpg?raw-true" alt="偵錯圖"></p>
+<h1 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h1><p>以下網址為NVM安裝</p>
+<ul>
+<li><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="external">windows-NVM</a></li>
+<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">NVM-Github</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nvm install [版本]</span><br><span class="line">(nvm install 6.5.0v)</span><br><span class="line"></span><br><span class="line">nvm list</span><br><span class="line">(查看目前的版本清單)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nvm use [版本]</span><br><span class="line">(切換版本nvm use 6.5.0)</span><br></pre></td></tr></table></figure>
+<h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g vue-cli</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="2016/09/10/20160910/" data-id="cisx7gb2y0006kgfe9g1m6ddf" class="article-share-link">Share</a>
+      
+        <a href="2016/09/10/20160910/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/ESLint/">ESLint</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/VSCODE/">VSCODE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Vue-js/">Vue.js</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Blog/2016/08/13/HelloJS-week4-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HelloJS-week4-5</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -217,11 +263,13 @@
 <script>
   var disqus_shortname = 'jingyongwangblog';
   
+  var disqus_url = 'http://JingYongWang.github.io/Blog/Blog/2016/09/10/20160910/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
