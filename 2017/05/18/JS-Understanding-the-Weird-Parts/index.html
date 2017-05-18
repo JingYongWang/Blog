@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS_Understanding_the_Weird_Parts-Part1 | Yong</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Note for JS Understanding the Weird Parts克服JS的奇怪部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS_Understanding_the_Weird_Parts-Part1">
+<meta property="og:url" content="http://JingYongWang.github.io/Blog/2017/05/18/JS-Understanding-the-Weird-Parts/index.html">
+<meta property="og:site_name" content="Yong">
+<meta property="og:description" content="Note for JS Understanding the Weird Parts克服JS的奇怪部分">
+<meta property="og:updated_time" content="2017-05-18T06:09:49.210Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS_Understanding_the_Weird_Parts-Part1">
+<meta name="twitter:description" content="Note for JS Understanding the Weird Parts克服JS的奇怪部分">
+  
+    <link rel="alternate" href="/atom.xml" title="Yong" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/Blog/css/style.css">
+  
+
+  <!--2016/03/20 Add by JingYongWang-->
+  <link href="/Blog/favicon.png" rel="icon">
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Blog/" id="logo">Yong</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/Blog/" id="subtitle">答案很多,但我想用我的代碼寫出更好的解決方式</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/Blog/">Home</a>
+        
+          <a class="main-nav-link" href="/Blog/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/Blog/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://JingYongWang.github.io/Blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JS-Understanding-the-Weird-Parts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Blog/2017/05/18/JS-Understanding-the-Weird-Parts/" class="article-date">
+  <time datetime="2017-05-18T03:02:43.000Z" itemprop="datePublished">2017-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS_Understanding_the_Weird_Parts-Part1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Note for JS Understanding the Weird Parts<br><a href="https://www.udemy.com/javascriptjs/learn/v4/overview" target="_blank" rel="external">克服JS的奇怪部分</a>   </p>
+<a id="more"></a>
+<h1 id="名詞介紹與基本概念"><a href="#名詞介紹與基本概念" class="headerlink" title="名詞介紹與基本概念"></a>名詞介紹與基本概念</h1><ul>
+<li>Syntax parsers(語意分析器)<blockquote>
+<p>把程式碼翻譯成讓電腦讀懂的指令,類似compiler 或 interpreter (直譯器)</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>Execution context 執行環境</p>
+<blockquote>
+<p>目前程式執行的環境(全域，或是在哪個function，或變數)</p>
+</blockquote>
+</li>
+<li><p>Lexical environment 詞彙環境 -code執行到哪邊</p>
+</li>
+<li><p>Javascript在執行時會先在記憶體空間擺入<strong>變數</strong> 與 <strong>函數</strong> (關鍵字Hoisting)   </p>
+<blockquote>
+<p>如果先呼叫函數，還是會執行，但變數未定義前呼叫則是 <strong>Undefined</strong> </p>
+</blockquote>
+</li>
+<li><p>變數一開始的值為 undefined   </p>
+</li>
+<li><p>undefined != not defined </p>
+<blockquote>
+<p>undefined : 未定義 =&gt; 有變數但沒定義值或形態<br>not defined : 尚未定義 =&gt; 沒有定義這個變數         </p>
+</blockquote>
+</li>
+<li><p>singel threaded  單執行緒</p>
+<blockquote>
+<p>一個執行一個指令(JS從程式碼角度看)    </p>
+</blockquote>
+</li>
+<li><p>synchronous execution 同步執行       </p>
+<blockquote>
+<p>一次一個</p>
+</blockquote>
+</li>
+<li><p>FUNCTION invocation 呼叫函數</p>
+</li>
+<li>Scope Chain 範圍鏈</li>
+<li><p>範圍代表能取變數的地方</p>
+</li>
+<li><p>外部環境參照的連結</p>
+</li>
+<li>asynchronous 非同步 一個時機點不只一個</li>
+<li>Dynamic Type JS 動態型別(處理型別的方式)</li>
+<li><p>Static Type </p>
+<blockquote>
+<p>EX:Java使用靜態型別，代表一開始告訴編譯器你的變數是甚麼型別    </p>
+</blockquote>
+</li>
+<li><p>JS 有六種Primitive type 基本型別    </p>
+<blockquote>
+<p>1.undefined 表示還不存在(未設變數給它)<br>2.Null 代表不存在，空值(可以設變數給它)<br>3.Boolean ture or false<br>4.number(可能是float或整數)<br>5.string 字串<br>6.symbol (for es6)   </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>運算子 operators 特殊的function</li>
+<li>Precedence 優先性  Associativity 相依性</li>
+<li>coercion 強制型轉</li>
+<li>object Literals 物件實體</li>
+<li>Faking NameSpaces 偽命名空間</li>
+</ul>
+<h1 id="變數與物件建立觀念"><a href="#變數與物件建立觀念" class="headerlink" title="變數與物件建立觀念"></a>變數與物件建立觀念</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line">     </span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"hello World"</span>;</span><br><span class="line"></span><br><span class="line">fuction b()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Hello'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!<span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'it is undefined'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a is defined);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b();</span><br><span class="line"></span><br><span class="line"><span class="comment">//long run function 3秒後觸發</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waitThreeSceonds</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ms = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime() + <span class="number">3000</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">new</span> <span class="built_in">Date</span>() &lt; ms) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'finish function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">waitThreeSceonds();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'finish execution'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Assignment  right to left in = </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a1 = <span class="number">1</span> , a2 = <span class="number">2</span> ,a3 = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">a1 = a2 = a3;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a1,a2,a3);</span><br><span class="line"></span><br><span class="line"><span class="comment">//因為c未定義為undefined</span></span><br><span class="line"><span class="comment">//undeinfed = false</span></span><br><span class="line"><span class="comment">//顯示nothing</span></span><br><span class="line"><span class="keyword">var</span> c;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(c)&#123;</span><br><span class="line">    <span class="comment">//true</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'there is something'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="comment">//false</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'nothing'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// || or符號</span></span><br><span class="line"><span class="comment">//若有參數傳入  true || false (取前面) false || true(取後面)</span></span><br><span class="line"><span class="comment">//後面可以當作Default</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">great</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    params = params || <span class="string">'&lt;Default name&gt;'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello '</span> + params);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">great(<span class="string">'Tony'</span>);</span><br><span class="line">great();</span><br><span class="line"></span><br><span class="line"><span class="comment">//物件建立方式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person[<span class="string">"firstName"</span>] = <span class="string">'blue'</span></span><br><span class="line">person[<span class="string">"LastName"</span>] = <span class="string">'way'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> firstNamePrototype = firstName;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person);</span><br><span class="line"><span class="built_in">console</span>.log(person[firstNamePrototype]);</span><br><span class="line"><span class="built_in">console</span>.log(person.firstName);</span><br><span class="line"></span><br><span class="line"><span class="comment">//需要new 一個對象</span></span><br><span class="line">person.address = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line">person.address.street = <span class="string">"111 Main st"</span>;</span><br><span class="line">person.address.city = <span class="string">"New York"</span>;</span><br><span class="line">person.address.state = <span class="string">"NY"</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person)</span><br><span class="line"><span class="built_in">console</span>.log(person.address.street);</span><br><span class="line"><span class="built_in">console</span>.log(person[<span class="string">"address"</span>][<span class="string">"state"</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//另一種物件建立方式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> personA = &#123; </span><br><span class="line">    firstname : <span class="string">'Tony'</span>, </span><br><span class="line">    lastname: <span class="string">'Allce'</span>,</span><br><span class="line">    address : &#123;</span><br><span class="line">        street : <span class="string">'111 Main st'</span>,</span><br><span class="line">        city : <span class="string">'New York'</span>,</span><br><span class="line">        state : <span class="string">'NY'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(personA);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greatA</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hi "</span> + person.firstname);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">greatA(personA);</span><br><span class="line"></span><br><span class="line">greatA(&#123;</span><br><span class="line">   firstname: <span class="string">'Mary'</span>,</span><br><span class="line">   lastname: <span class="string">'Doe'</span> </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">personA.address.street2 = &#123;</span><br><span class="line">    street: <span class="string">'333 Main st'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(personA.address.street2);</span><br><span class="line"><span class="built_in">console</span>.log(personA);</span><br><span class="line"></span><br></pre></td></tr></table></figure>      
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="2017/05/18/JS-Understanding-the-Weird-Parts/" data-id="cj2u0ndv70002l0ferzwv8yvn" class="article-share-link">Поделиться</a>
+      
+        <a href="2017/05/18/JS-Understanding-the-Weird-Parts/#disqus_thread" class="article-comment-link">Комментарии</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Blog/tags/Javascript/">Javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Blog/2016/09/10/20160910/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Предыдущий</strong>
+      <div class="article-nav-title">20160910</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Git/">Git</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Метки</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Angularjs/">Angularjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/ES6/">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/ESLint/">ESLint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Heroku/">Heroku</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/NPM/">NPM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/NVM/">NVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Postman/">Postman</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Redux/">Redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Sails/">Sails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Scss/">Scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/TDD/">TDD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/VSCODE/">VSCODE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/sequelize/">sequelize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Blog/tags/socket-io/">socket.io</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Облако меток</h3>
+    <div class="widget tagcloud">
+      <a href="/Blog/tags/Angularjs/" style="font-size: 10px;">Angularjs</a> <a href="/Blog/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/Blog/tags/ESLint/" style="font-size: 10px;">ESLint</a> <a href="/Blog/tags/Git/" style="font-size: 15px;">Git</a> <a href="/Blog/tags/Heroku/" style="font-size: 10px;">Heroku</a> <a href="/Blog/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/Blog/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/Blog/tags/NPM/" style="font-size: 10px;">NPM</a> <a href="/Blog/tags/NVM/" style="font-size: 10px;">NVM</a> <a href="/Blog/tags/Postman/" style="font-size: 10px;">Postman</a> <a href="/Blog/tags/React/" style="font-size: 10px;">React</a> <a href="/Blog/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/Blog/tags/Sails/" style="font-size: 10px;">Sails</a> <a href="/Blog/tags/Scss/" style="font-size: 10px;">Scss</a> <a href="/Blog/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/Blog/tags/VSCODE/" style="font-size: 10px;">VSCODE</a> <a href="/Blog/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/Blog/tags/css/" style="font-size: 10px;">css</a> <a href="/Blog/tags/sequelize/" style="font-size: 10px;">sequelize</a> <a href="/Blog/tags/socket-io/" style="font-size: 10px;">socket.io</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/07/">七月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2016/03/">三月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Blog/2017/05/18/JS-Understanding-the-Weird-Parts/">JS_Understanding_the_Weird_Parts-Part1</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2016/09/10/20160910/">20160910</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2016/08/13/HelloJS-week4-5/">HelloJS-week4-5</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2016/07/29/HelloJS-week3/">HelloJS-week3</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2016/07/23/HelloJS-week2/">HelloJS-week2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">FriendLink</h3>
+  <div class="widget">
+      <ul>
+        <li><a href="http://linnic.github.io/Blog/" title = "Linnic">Linnic</li>
+        <li><a href = "http://kyoyadmoon.github.io/blog/" title="DMoon's Laputa">DMoon's Laputa</li>
+      </ul>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Jing Yong Wang<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/Blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/Blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/Blog/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jingyongwangblog';
+  
+  var disqus_url = 'http://JingYongWang.github.io/Blog/Blog/2017/05/18/JS-Understanding-the-Weird-Parts/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/Blog/fancybox/jquery.fancybox.css">
+  <script src="/Blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/Blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>
